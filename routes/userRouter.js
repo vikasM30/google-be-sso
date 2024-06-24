@@ -4,7 +4,6 @@ const app = express()
 const userController = require('../controller/userController')
 
 const isLoggedIn = (req, res, next) => {
-    // console.log(req.user)
     req.user ? next() : res.render('unauthorized')
 }
 app.get('/youtubesubscription', isLoggedIn, userController.getSubscription)

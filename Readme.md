@@ -11,6 +11,8 @@ This tutorial includes Basic Google OAuth SSO with Passport.js and also Basic Yo
 
 ## Please remember to add the required scopes for using Youtube API.
 
+## Postgres is used as Database.
+
 ## Add and Populate the `.env` file in the project root and fill the keys as given in `sample.env` file in project root
 
 ## Available Scripts

@@ -57,7 +57,6 @@ const searchList = async (req, res) => {
 const createUsers = async (req, res) => {
     const { id, name, email } = req.session.passport.user
     const queryString = `insert into test_users (googleid, name, email) values('${id}', '${name}', '${email}')`
-    console.log(queryString)
     client.query(queryString, async (error, results) => {
         if(!error) {
         //   res.json({data: "Successfully Inserted!"})
