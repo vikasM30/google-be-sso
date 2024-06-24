@@ -13,7 +13,7 @@ app.use(passport.session())
 
 app.get('/', userController.loadAuth)
 
-app.get('/auth/google', passport.authenticate('google', { scope: ['email', 'profile'] }))
+app.get('/auth/google', passport.authenticate('google', { scope: ['email', 'profile', 'https://www.googleapis.com/auth/youtube'] }))
 
 app.get('/auth/google/callback', passport.authenticate('google', {
     successRedirect: '/success',

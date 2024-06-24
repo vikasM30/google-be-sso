@@ -16,5 +16,5 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.CALLBACK_URL,
     passReqToCallback: true
 }, (request, accessToken, refreshToken, profile, done) => {
-    return done(null, accessToken)
+    return done(null, { id: profile.id, name: profile.displayName, email: profile.emails[0].value, accessToken })
 }))
